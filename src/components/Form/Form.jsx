@@ -1,22 +1,22 @@
-import React, { useState } from "react";
-import toast from "react-hot-toast";
-import { BiMailSend } from "react-icons/bi";
-import styles from "./Form.module.css";
-import { useAddCommentMutation } from "../../redux/commentApi";
+import React, { useState } from 'react';
+import toast from 'react-hot-toast';
+import { BiMailSend } from 'react-icons/bi';
+import styles from './Form.module.css';
+import { useAddCommentMutation } from '../../redux/commentApi';
 
 export const Form = () => {
   const [addComment, _] = useAddCommentMutation();
 
-  const [author, setAuthor] = useState("");
-  const [content, setContent] = useState("");
+  const [author, setAuthor] = useState('');
+  const [content, setContent] = useState('');
 
-  const onHandleChange = (e) => {
+  const onHandleChange = e => {
     const { name, value } = e.target;
     switch (name) {
-      case "name":
+      case 'name':
         setAuthor(value);
         break;
-      case "text":
+      case 'text':
         setContent(value);
 
       default:
@@ -24,18 +24,18 @@ export const Form = () => {
     }
   };
 
-  const onHandleSubmit = async (e) => {
+  const onHandleSubmit = async e => {
     e.preventDefault();
     try {
       await addComment({ author, content });
-      toast.success("adding new comment succesfull");
+      toast.success('adding new comment succesfull');
     } catch (error) {
       console.log(error);
-      toast.error("Oh no, smt wron");
+      toast.error('Oh no, smt wrong!');
     }
 
-    setAuthor("");
-    setContent("");
+    setAuthor('');
+    setContent('');
   };
 
   return (
