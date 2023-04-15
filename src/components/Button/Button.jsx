@@ -32,7 +32,7 @@ export const Button = ({ children, counter, role = 'thumbsUp', id }) => {
       {children}
 
       <span className={styles.counter}>
-        <span>{isLoading ? '..' : ''}</span>
+        <span>{isLoading ? '...' : ''}</span>
         {counter}
       </span>
     </button>
