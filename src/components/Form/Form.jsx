@@ -28,7 +28,7 @@ export const Form = () => {
     e.preventDefault();
     try {
       await addComment({ author, content });
-      toast.success('adding new comment succesfull');
+      toast.success('adding new comment successfully');
     } catch (error) {
       console.log(error);
       toast.error('Oh no, smt wrong!');
