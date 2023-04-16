@@ -31,7 +31,7 @@ export const Form = () => {
       toast.success('adding new comment successfully');
     } catch (error) {
       console.log(error);
-      toast.error('Oh no, smt wrong!!!');
+      toast.error('Oh no, smt wrong!');
     }
 
     setAuthor('');
