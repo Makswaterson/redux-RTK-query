@@ -1,7 +1,6 @@
 {
   "name": "51blended",
   "private": true,
-  "homepage": "https://Makswaterson.github.io/redux-RTK-query",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
